@@ -4,9 +4,6 @@
     font-family: 'Lora', serif;
     font-size: medium;
 }
-body{
-    
-}
 html{
     font-size: 62.5%; 
 }
@@ -36,9 +33,39 @@ header{
 .nav-link{
     margin: 0rem 2rem;
 }
+.nav-link.active{
+    color: rgb(68, 25, 12) !important;
+}
 
 
+/*comienzo del carrusel*/
+.carousel{
+    text-align: center;
+    background-color: #c3a995;
+    padding: 33rem;
+    width: 100%;
+    
+}
+.carousel-item{
+    font-style: italic;
+    font-size: smaller;
+    
+}
 
+h1{
+    font-weight: bolder;
+    font-size: xx-large;
+}
+@media (max-width: 768px){
+    .carousel.carousel-item{
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+}
+@media (max-width 320px){
+
+}
 /*codigo del card del ON SALE*/
 .sale{
     margin: 3rem 0rem;
@@ -48,11 +75,11 @@ header{
     text-align: center;
     margin: 10rem 0rem 5rem 0rem;
 }
-
 .card-section{
     display: flex;
-    flex-wrap: row wrap;
+    flex-flow: wrap;
     justify-content: space-evenly;
+    align-items:flex-start;
 }
 .card-title{
     font-size: large;
@@ -68,39 +95,48 @@ header{
 }
 .card-price-number-linethrough{
     text-decoration: line-through;
-    margin-right: 3rem;
     font-size: small;
 }
+@media (max-width 768px){
+    .card-section{
 
-.card{
-    
+    }
 }
 
 
-
-/*comienzo del carrusel*/
-.carousel{
-    text-align: center;
-    background-color: #c3a995;
-    padding: 33rem;
-}
-.carousel-item{
-    font-style: italic;
-    font-size: smaller;
-}
-h1{
-    font-weight: bolder;
-    font-size: xx-large;
-}
-
-
-/* comienzo de footer*/
-.footer{
+/* comienzo del footer*/
+footer {
     background-color: #c3a995;
     padding: 5rem 0rem;
     margin-top: 4rem;
 }
-.footer__instagram{
-    vertical-align: middle;
-    padding: 1rem;
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
+
+.footer-div-1 {
+    grid-column: 1 / 2;
+}
+
+.footer-div-2 {
+    grid-column: 2 / 3;
+}
+
+.footer-div-3 {
+    grid-column: 3 / 4;
+}
+.footer-h3{
+    font-weight: bold;
+}
+.footer-a{
+    text-decoration: none;
+}
+
+
+
+/*no estaria pudiendo sacarle el hipervinculo, a pesar de que arriba de todo tengo el mismo atributo para los a
+.footer-ul-categorias{
+    text-decoration: none;
+}*/
