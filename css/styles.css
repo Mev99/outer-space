@@ -42,7 +42,7 @@ header{
 .carousel{
     text-align: center;
     background-color: #c3a995;
-    padding: 33rem;
+    padding: 33rem 0rem;
     width: 100%;
     
 }
@@ -51,20 +51,17 @@ header{
     font-size: smaller;
     
 }
-
 h1{
     font-weight: bolder;
     font-size: xx-large;
 }
-@media (max-width: 768px){
-    .carousel.carousel-item{
-        display: flex;
-        flex-flow: row;
-        justify-content: center;
-    }
-}
 
 /*codigo del card del ON SALE*/
+.card:hover {
+    box-shadow: 0px 0px 10px 0px #CCC;
+    transform: scale(1.1);
+  }
+
 .sale{
     margin: 3rem 0rem;
     font-weight: bold;
@@ -95,8 +92,6 @@ h1{
     text-decoration: line-through;
     font-size: small;
 }
-
-
 
 /* comienzo del footer*/
 footer {
@@ -137,7 +132,7 @@ footer {
 
 /*comienzo de CSS Pol-cambio*/
 .main-title-div{
-    padding: 20rem 0rem 10rem;
+    padding: 20rem 0rem 10rem 0rem;
 }
 .main-title{
     text-align: center;
@@ -193,42 +188,53 @@ footer {
     font-size: x-large;
     font-style: oblique;
 }
+/* NO PUEDO HACERLA RESPONSIVE >:( HELP! I NEED SOMEBODY, HELP!!*/
 #form-contact{
     padding-bottom: 8rem;
     display: grid;
     grid-template-areas: 
-    "name input-name contact"
-    "email input-email contact"
-    "message input-message contact"
-    ". button contact";
+    "name input-name"
+    "email input-email"
+    "message input-message"
+    ". button";
     grid-template-rows:1fr 1fr 5fr 1fr ;
-    grid-template-columns: 150px 250px 500px ;  
+    grid-template-columns: 150px 250px ;  
     grid-gap: 1.5rem  
 }
-.label-name{
-    grid-area: name;
-}
-.input-name{
-    grid-area: input-name;
-}
-.label-email{
-    grid-area: email;
-}
-.input-email{
-    grid-area: input-email;
-}
-.label-message{
-    grid-area: message;
-}
-.input-message{
-    grid-area: input-message;
-}
-.button-message{
-    grid-area: button;
-}
+    /*No entiendo por que funciona igualmente y todo se posiciona de la manera correcta sin necesidad de indicarle a donde ir, es una casualidad? El unico que le tuve que indicar el 'grid-area' es al boton 'enviar'.
+    .label-name{
+        grid-area: name;
+    }
+    .input-name{
+        grid-area: input-name;
+    }
+    .label-email{
+        grid-area: email;
+    }
+    .input-email{
+        grid-area: input-email;
+    }
+    .label-message{
+        grid-area: message;
+    }
+    .input-message{
+        grid-area: input-message;
+    }*/
+
+    .button-message{
+        grid-area: button;
+    }
+/*Quiero poner la informacion de contacto a la derecha del <form>
 .form-contact-div{
     grid-area: contact;
+}*/
+
+@media (max-width: 576px){
+    .form-div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
-
-
+/*Comienza css del 'pilchas-muchas pilchas'*/
