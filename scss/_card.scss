@@ -1,0 +1,43 @@
+/*Comienza el CSS de los card*/
+/*Titulo del "SALE" del index*/
+.sale {
+    margin: 3rem 0rem;
+    font-weight: bold;
+    font-size: x-large;
+    text-decoration: underline;
+    text-align: center;
+    margin: 10rem 0rem 5rem 0rem;
+}
+.card {
+    /*Se dio que no tenia que escribir nada en la card, pero queria probar el nesting*/
+    &:hover {
+        box-shadow: 0px 0px 10px 0px #CCC;
+        transform: scale(1.1);
+    }
+}
+.card-section {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    align-items:flex-start;
+}
+
+.card-title {
+    font-size: large;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+.card-text {
+    font-style: italic;
+}
+
+.card-price-number {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.card-price-number-linethrough {
+    text-decoration: line-through;
+    font-size: small;
+}
