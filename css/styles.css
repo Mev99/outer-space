@@ -133,16 +133,21 @@ h1 {
   font-size: x-large;
   font-style: oblique; }
 
-#form-contact {
-  padding-bottom: 8rem;
-  display: grid;
-  grid-template-areas: "name input-name" "email input-email" "message input-message" ". button";
-  grid-template-rows: 1fr 1fr 5fr 1fr;
-  grid-template-columns: 150px 250px;
-  grid-gap: 1.5rem;
-  max-width: 100%; }
+/*#form-contact {
+    padding-bottom: 8rem;
+    display: grid;
+    grid-template-areas: 
+    "name input-name"
+    "email input-email"
+    "message input-message"
+    ". button";
+    grid-template-rows:1fr 1fr 5fr 1fr;
+    grid-template-columns: 150px 250px;  
+    grid-gap: 1.5rem ;
+    max-width: 100%;
+}
 
-/*No entiendo por que funciona igualmente y todo se posiciona de la manera correcta sin necesidad de indicarle a donde ir, es una casualidad? El unico que le tuve que indicar el 'grid-area' es al boton 'enviar'.
+    /*No entiendo por que funciona igualmente y todo se posiciona de la manera correcta sin necesidad de indicarle a donde ir, es una casualidad? El unico que le tuve que indicar el 'grid-area' es al boton 'enviar'.
     .label-name {
         grid-area: name;
     }
@@ -160,15 +165,73 @@ h1 {
     }
     .input-message {
         grid-area: input-message;
-    }*/
-.button-message {
-  grid-area: button; }
+    }
 
-@media (max-width: 576px) {
-  .form-div {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap; } }
+.button-message {
+    grid-area: button;
+}
+/*@media (max-width: 576px) {
+    .form-div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+}*/
+/*ID del <form> y padre*/
+#form__contact {
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 5fr);
+  grid-template-rows: 3fr repeat(2, 1fr) repeat(2, 3fr);
+  row-gap: 15px;
+  position: relative; }
+
+/*subtitulo*/
+.p__consulta {
+  font-size: large;
+  text-decoration: solid;
+  width: 200px; }
+
+/*div del form
+.div__form {
+    position: relative
+}*/
+/* Los label del form*/
+.label__name {
+  grid-column: 1;
+  grid-row: 2; }
+
+.label__email {
+  grid-column: 1;
+  grid-row: 3; }
+
+.label__message {
+  grid-column: 1;
+  grid-row: 4; }
+
+/* Los inputs y button del form*/
+.input__name {
+  grid-column: 2;
+  grid-row: 2;
+  width: 50%; }
+
+.input__email {
+  grid-column: 2;
+  grid-row: 3;
+  width: 50%; }
+
+.input__message {
+  grid-column: 2;
+  grid-row: 4;
+  width: 65%; }
+
+.button__message {
+  grid-column: 2;
+  grid-row: 5;
+  width: 15%;
+  height: 45%;
+  text-align: center;
+  align-items: center;
+  align-content: center; }
 
 footer {
   background-color: #c3a995;
