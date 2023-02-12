@@ -1,4 +1,4 @@
-#form-contact {
+/*#form-contact {
     padding-bottom: 8rem;
     display: grid;
     grid-template-areas: 
@@ -30,16 +30,76 @@
     }
     .input-message {
         grid-area: input-message;
-    }*/
+    }
 
 .button-message {
     grid-area: button;
 }
-
-@media (max-width: 576px) {
+/*@media (max-width: 576px) {
     .form-div {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
     }
+}*/
+/*ID del <form> y padre*/
+#form__contact {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 5fr);
+    grid-template-rows: 3fr repeat(2, 1fr) repeat(2, 3fr);
+    row-gap: 15px;
+
+    position: relative;
+}
+
+/*subtitulo*/
+.p__consulta{
+    font-size: large;
+    text-decoration: solid;
+    width: 200px;
+}
+/*div del form
+.div__form {
+    position: relative
+}*/
+
+/* Los label del form*/
+.label__name {
+    grid-column: 1;
+    grid-row: 2;
+}
+.label__email {
+    grid-column: 1;
+    grid-row: 3;
+}
+.label__message {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+/* Los inputs y button del form*/
+.input__name {
+    grid-column: 2;
+    grid-row: 2;
+    width: 50%;
+}
+.input__email {
+    grid-column: 2;
+    grid-row: 3;
+    width: 50%;
+}
+.input__message {
+    grid-column: 2;
+    grid-row: 4;
+    width: 65%;
+    ;
+}
+.button__message {
+    grid-column: 2;
+    grid-row: 5;
+    width: 15%;
+    height: 45%;
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
