@@ -2,6 +2,7 @@
 $primary-color:#e9dfd8;
 $secondary-color:#c3a995;
 $terciary-color:rgb(158, 113, 42);
+$background-color: rgb(246, 240, 235);
 
 /* "@" */
 $phone: 427px;
@@ -9,4 +10,35 @@ $phone-xs: 376px;
 $tablet: 769px;
 
 /*Spacing*/
-$footer-icon-spacing: 10px
+$footer-icon-spacing: 15px;
+$form-spacing: 20px;
+$left-margin: 20px;
+
+/*Box settings*/
+$border-radius: 10px;
+
+/*MIXIN para inputs*/
+@mixin input-box($padding: 10px, $border-color: #ccc,) {
+    padding: $padding;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    background-color: $background-color;
+    &:focus {
+      outline: none;
+      border-color: darken($border-color, 20%);
+    }
+  }
+
+/*MIXIN para boton "enviar"*/
+  @mixin send-button($hover-color: rgb(255, 255, 255), $border-radius: 5px, $border: none) {
+    background-color: $terciary-color;
+    color: white;
+    border-radius: $border-radius;
+    border: $border;
+    &:hover {
+      background-color: rgb(77, 131, 77);
+      color: $hover-color;
+    }
+  }
+  
+  
