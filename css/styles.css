@@ -66,17 +66,15 @@ h1 {
   text-align: center;
   margin: 10rem 0rem 5rem 0rem; }
 
-.card {
-  /*Se dio que no tenia que escribir nada en la card, pero queria probar el nesting*/ }
-  .card:hover {
-    box-shadow: 0px 0px 10px 0px #CCC;
-    transform: scale(1.1); }
+.card:hover {
+  box-shadow: 0px 0px 10px 0px #CCC;
+  transform: scale(1.1); }
 
 .card-section {
   display: flex;
-  flex-flow: wrap;
-  justify-content: flex-start;
-  align-items: flex-start; }
+  flex-flow: column;
+  align-items: center;
+  gap: 2.5rem; }
 
 .card-title {
   font-size: large;
@@ -93,6 +91,18 @@ h1 {
 .card-price-number-linethrough {
   text-decoration: line-through;
   font-size: small; }
+
+/*tablet*/
+@media (min-width: 768px) {
+  .card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; } }
+
+/*desktop / laptop*/
+@media (min-width: 1024px) {
+  .card-section {
+    grid-template-columns: repeat(3, 1fr); } }
 
 .main-title-div {
   padding: 20rem 0rem 10rem 0rem; }
@@ -256,7 +266,7 @@ footer {
   background-color: #342418;
   color: #e2e0d4;
   position: relative;
-  top: 2rem; }
+  top: 1rem; }
 
 .derechos__reservados__text {
   display: inline;

@@ -9,17 +9,19 @@
     margin: 10rem 0rem 5rem 0rem;
 }
 .card {
-    /*Se dio que no tenia que escribir nada en la card, pero queria probar el nesting*/
+    //flex: auto;
     &:hover {
         box-shadow: 0px 0px 10px 0px #CCC;
         transform: scale(1.1);
     }
 }
+
 .card-section {
     display: flex;
-    flex-flow: wrap;
-    justify-content: flex-start;
-    align-items:flex-start;
+    flex-flow: column;
+    align-items: center;
+    gap: 2.5rem;
+    
 }
 
 .card-title {
@@ -40,4 +42,20 @@
 .card-price-number-linethrough {
     text-decoration: line-through;
     font-size: small;
+}
+
+/*tablet*/
+@media (min-width: $tablet) {
+    .card-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    }
+}
+
+/*desktop / laptop*/
+@media (min-width: $laptop) {
+    .card-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
