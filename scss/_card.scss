@@ -4,16 +4,8 @@
     margin: 3rem 0rem;
     font-weight: bold;
     font-size: x-large;
-    text-decoration: underline;
     text-align: center;
     margin: 10rem 0rem 5rem 0rem;
-}
-.card {
-    //flex: auto;
-    &:hover {
-        box-shadow: 0px 0px 10px 0px #CCC;
-        transform: scale(1.1);
-    }
 }
 
 .card-section {
@@ -21,6 +13,14 @@
     flex-flow: column;
     align-items: center;
     gap: 2.5rem;
+}
+
+.card {
+    //flex: auto;
+    &:hover {
+        box-shadow: 0px 0px 10px 0px #CCC;
+        transform: scale(1.1);
+    }
     
 }
 
@@ -44,6 +44,7 @@
     font-size: small;
 }
 
+/* "@" */
 /*tablet*/
 @media (min-width: $tablet) {
     .card-section {
