@@ -8,6 +8,7 @@
     padding: 5rem 1rem;
 }
 
+/* GRID Y STYLES DE POLITICA DE CAMBIO */
 .secondary-title-div {
     padding-bottom: 10rem;
     display: grid;
@@ -40,13 +41,22 @@
     margin: 0 auto;
 }
 
-@media (max-width: 767px) {
+/* Styles para contacto */
+.main-p {
+    font-size: x-large;
+    font-style: oblique;
+}
+
+
+/* "@" */
+/* TABLET */
+@media (max-width: $tablet) {
     .secondary-title-photo {
         display: none;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $tablet) {
     .secondary-title-div {
         display: grid;
         grid-template-areas: 
@@ -55,10 +65,4 @@
         grid-template-rows: 1fr 2fr;
         grid-template-columns: 1fr;
     }
-}
-
-/* Comienzo del CSS Contacto*/
-.main-p {
-    font-size: x-large;
-    font-style: oblique;
 }

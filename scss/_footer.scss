@@ -58,7 +58,8 @@ footer {
     padding-right: $footer-icon-spacing;
 }
 
-/* Media queries @*/
+/* "@" */
+/* TELEFONO */
 @media (max-width: $phone) {
     .footer-grid {
         font-size: smaller;
@@ -87,6 +88,7 @@ footer {
     }
 }
 
+/* Telefono pequeno */
 @media (max-width: $phone-xs) {
     .footer-div-3 {
         display: flex;

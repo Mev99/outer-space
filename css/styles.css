@@ -3,7 +3,7 @@
 /*Spacing*/
 /*Box settings*/
 /*MIXIN para inputs*/
-/*MIXIN para boton "enviar"*/
+/* MIXIN para boton "enviar" en "contacto" */
 * {
   margin: 0;
   padding: 0;
@@ -69,15 +69,13 @@ h1 {
   flex-flow: column;
   align-items: center;
   gap: 2.5rem; }
-
-.card:hover {
-  box-shadow: 0px 0px 10px 0px #CCC;
-  transform: scale(1.1); }
-
-.card-title {
-  font-size: large;
-  margin-bottom: 2rem;
-  text-decoration: underline; }
+  .card-section .card:hover {
+    box-shadow: 0px 0px 10px 0px #CCC;
+    transform: scale(1.1); }
+  .card-section .card .card-title {
+    font-size: large;
+    margin-bottom: 2rem;
+    text-decoration: underline; }
 
 .card-text {
   font-style: italic; }
@@ -111,6 +109,7 @@ h1 {
   background-color: #c3a995;
   padding: 5rem 1rem; }
 
+/* GRID Y STYLES DE POLITICA DE CAMBIO */
 .secondary-title-div {
   padding-bottom: 10rem;
   display: grid;
@@ -135,21 +134,23 @@ h1 {
   grid-area: photo;
   margin: 0 auto; }
 
-@media (max-width: 767px) {
+/* Styles para contacto */
+.main-p {
+  font-size: x-large;
+  font-style: oblique; }
+
+/* "@" */
+/* TABLET */
+@media (max-width: 768px) {
   .secondary-title-photo {
     display: none; } }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .secondary-title-div {
     display: grid;
     grid-template-areas: "title" "text";
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 1fr; } }
-
-/* Comienzo del CSS Contacto*/
-.main-p {
-  font-size: x-large;
-  font-style: oblique; }
 
 /*ID del <form> y padre*/
 #form__contact {
@@ -304,7 +305,8 @@ footer {
 .footer__contact__icon {
   padding-right: 15px; }
 
-/* Media queries @*/
+/* "@" */
+/* TELEFONO */
 @media (max-width: 427px) {
   .footer-grid {
     font-size: smaller; }
@@ -322,6 +324,7 @@ footer {
   .derechos__reservados__text {
     margin-left: 5px; } }
 
+/* Telefono pequeno */
 @media (max-width: 376px) {
   .footer-div-3 {
     display: flex;

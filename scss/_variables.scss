@@ -30,7 +30,7 @@ $border-radius: 10px;
     }
   }
 
-/*MIXIN para boton "enviar"*/
+/* MIXIN para boton "enviar" en "contacto" */
   @mixin send-button($hover-color: rgb(255, 255, 255), $border-radius: 5px, $border: none) {
     background-color: $terciary-color;
     color: white;
